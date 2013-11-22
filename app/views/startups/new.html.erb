@@ -1,0 +1,24 @@
+
+<div class ="container">
+<%= form_for @startup do |f|%>
+<%= f.label :website%>
+<%= f.text_field :website%>
+<input type="submit" id="pull_angel" value="Fill From Angellist">
+<%= f.label :name%>
+<%= f.text_field :name %><br/>
+<%= f.label :logo_url%>
+<%= f.text_field :logo_url %><br/>
+<%= f.label :state%>
+<%= f.text_field :state %><br/>
+<%= f.label :description%>
+<%= f.text_area :description%><br/>
+<%= f.label :pitch %>
+<%= f.text_area :pitch %><br/>
+<%= f.label :markets%>
+<%= f.text_area :markets%><br/>
+<%= f.label :angel_url %>
+<%= f.text_field :angel_url %><br/>
+<%= f.submit %>
+
+<%end%>
+</div>

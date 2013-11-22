@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20131122043345) do
 
   create_table "startups", force: true do |t|
+    t.string   "website"
     t.string   "name"
     t.string   "logo_url"
     t.string   "state"

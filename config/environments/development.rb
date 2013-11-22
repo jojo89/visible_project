@@ -26,4 +26,10 @@ VisibleProject::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+
+  AngellistApi.configure do |config|
+    config.access_token = 'fad48c9ba1143d57c9cba60adca50a59'
+
+  end
 end

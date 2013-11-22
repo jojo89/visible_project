@@ -1,0 +1,29 @@
+.container {
+  text-align:center;
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+
+#new_startup label {
+color: black;
+font-family: 'Roboto Condensed', sans-serif;
+}
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+input {
+  display: inline-block;
+  
+}	
+textarea {
+  display: inline-block;
+}	
+	
+	
+
