@@ -9,6 +9,7 @@ class StartupsController < ApplicationController
 
   end	
 
+
   def fetch_website
     term = params["data"]
     url_friendly = url_parser(term)
@@ -29,8 +30,6 @@ class StartupsController < ApplicationController
          :markets => markets,
     	} 
   end	
-
-
 
 
   def create
