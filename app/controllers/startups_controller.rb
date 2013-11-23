@@ -14,9 +14,22 @@ class StartupsController < ApplicationController
     url_friendly = url_parser(term)
     response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
     string = open(response).first
-    puts string
     hash = JSON.parse(string)
-    puts hash
+    locale_id = hash["locations"].first["id"].to_s
+    response = "https://api.angel.co/1/tags/"+locale_id +"/parents" 
+    string = open(response).first
+    p string
+    render :json => {:name => hash["name"],
+    	   :angellist_url => hash["angellist_url"],
+    	   :logo_url => hash["logo_url"],
+    	   :description => hash["angellist_url"],
+    	   :pitch => hash["high_concept"],
+    	   :company_url => hash["company_url"],
+    	   :state => hash["markets"],
+
+    	} 
+
+
 
   end	
 
