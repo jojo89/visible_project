@@ -17,6 +17,14 @@ class StartupsController < ApplicationController
     string = open(response).first
     hash = JSON.parse(string)
     state = find_location(hash)
+    city = hash["locations"].first["display_name"]
+    markets = []
+    hash["markets"].each do |h|
+      markets << h["display_name"]
+    end  
+
+
+
     render :json => {:name => hash["name"],
     	   :angellist_url => hash["angellist_url"],
     	   :logo_url => hash["logo_url"],
@@ -24,6 +32,8 @@ class StartupsController < ApplicationController
     	   :pitch => hash["high_concept"],
     	   :company_url => hash["company_url"],
     	   :state => state,
+         :city => city,
+         :markets => markets,
     	} 
 
 

@@ -5,6 +5,7 @@ class CreateStartups < ActiveRecord::Migration
       t.string :name
       t.string :logo_url
       t.string :state
+      t.string :city
       t.text :description
       t.text :pitch
       t.text :markets
