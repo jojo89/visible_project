@@ -11,17 +11,8 @@ class StartupsController < ApplicationController
 
   def fetch_website
     term = params["data"]
-
     url_friendly = url_parser(term)
-    response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
-    begin
-      string = open(response)
-    rescue
-      url_friendly = "www." + url_friendly
-      response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
-      string= open(response)
-    end
-    string = string.first
+    string = make_friendly_url(url_friendly).first
     hash = JSON.parse(string)
     state = find_location(hash)
     city = hash["locations"].first["display_name"]

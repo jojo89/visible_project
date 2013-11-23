@@ -43,5 +43,17 @@ module ApplicationHelper
       array
     end	
 
+    def make_friendly_url(url_friendly)
+      response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
+      begin
+        string = open(response)
+      rescue
+        url_friendly = "www." + url_friendly
+        response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
+        string= open(response)
+      end
+      string
+    end	
+
 end
 # 
