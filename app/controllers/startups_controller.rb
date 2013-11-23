@@ -9,22 +9,24 @@ class StartupsController < ApplicationController
 
   end	
 
-  def fetch
-  	states =[ "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+  def fetch_website
     term = params["data"]
+
     url_friendly = url_parser(term)
     response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
-    string = open(response).first
+    begin
+      string = open(response)
+    rescue
+      url_friendly = "www." + url_friendly
+      response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
+      string= open(response)
+    end
+    string = string.first
     hash = JSON.parse(string)
     state = find_location(hash)
     city = hash["locations"].first["display_name"]
-    markets = []
-    hash["markets"].each do |h|
-      markets << h["display_name"]
-    end  
-
-
-
+    hashed_markets = hash["markets"]
+    markets = grab_markets(hashed_markets)
     render :json => {:name => hash["name"],
     	   :angellist_url => hash["angellist_url"],
     	   :logo_url => hash["logo_url"],
@@ -35,10 +37,10 @@ class StartupsController < ApplicationController
          :city => city,
          :markets => markets,
     	} 
-
-
-
   end	
+
+
+
 
   def create
     startup = params[:startup]

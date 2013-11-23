@@ -34,5 +34,14 @@ module ApplicationHelper
 	  locale
     end
 
+
+    def grab_markets(markets)
+      array = []
+      markets.each do |h|
+        array << h["display_name"]
+      end  
+      array
+    end	
+
 end
 # 

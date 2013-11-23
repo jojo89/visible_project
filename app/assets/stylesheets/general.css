@@ -1,29 +1,28 @@
 .container {
-  text-align:center;
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  position: relative;
+}
+.container div{
+  display: inline-block;
+}
+
+.photo {
+position: absolute;
+top: 45px;
+right: 66px;
 }
 
 #new_startup label {
 color: black;
 font-family: 'Roboto Condensed', sans-serif;
 }
-label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
+
+#logo{
+  float:right;
+  width:150px
 }
-input {
-  display: inline-block;
-  
-}	
-textarea {
-  display: inline-block;
-}	
-	
-	
+
 
