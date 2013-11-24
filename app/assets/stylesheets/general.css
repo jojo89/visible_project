@@ -1,3 +1,10 @@
+
+.form li {
+padding: 14px;
+list-style: none;
+}
+
+
 .container {
   margin: 20px auto;
   width: 600px;
@@ -11,18 +18,36 @@
 
 .photo {
 position: absolute;
-top: 45px;
-right: 66px;
+top: 170px;
+right: 55px;
 }
 
 #new_startup label {
 color: black;
+margin-right: 50px;
 font-family: 'Roboto Condensed', sans-serif;
+left:0px;
+}
+
+#new_startup input{
+  float: right;
+}
+
+#pull_website {
+  position: absolute;
+  top: 111px;
+  right: 105px;
+}
+
+
+
+#new_startup textarea{
+  float: right;
 }
 
 #logo{
   float:right;
-  width:150px
+  width:150px;
 }
 
 
