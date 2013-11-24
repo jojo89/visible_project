@@ -16,6 +16,7 @@ module ApplicationHelper
     end	
 
     def find_location(hash)
+      p hash	
       locale_id = hash["locations"].first["id"].to_s
       finished = false
       while finished == false
@@ -42,6 +43,7 @@ module ApplicationHelper
       end  
       array
     end	
+
 
     def make_friendly_url(url_friendly)
       response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
