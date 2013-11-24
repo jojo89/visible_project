@@ -47,7 +47,7 @@ describe "Application Helper"   do
         make_friendly_url(fixed).first.should eq(@response_string)
 	  end	
 
-      it "should return an array" do
+      it "should return an object with an error message" do
         make_friendly_url("nonsense").should eq({message: "Url not found"})
       end
 
