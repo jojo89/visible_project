@@ -10,7 +10,7 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 
 gem 'rspec-rails'
-
+gem 'selenium-webdriver'
 gem 'capybara'
 
 # Use Uglifier as compressor for JavaScript assets
