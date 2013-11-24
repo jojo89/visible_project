@@ -12,6 +12,7 @@ describe "New Startup Page",:js => true  do
   	 visit '/'
      fill_in 'startup_website', with:"visible.vc"
      click_button "Fill From Angellist"
+     find_field('startup_name').value.should eq 'Visible'
   end	
 	
 end

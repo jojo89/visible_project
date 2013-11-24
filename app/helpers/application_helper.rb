@@ -50,7 +50,11 @@ module ApplicationHelper
       rescue
         url_friendly = "www." + url_friendly
         response = "http://api.angel.co/1/startups/search?domain=" + url_friendly
-        string= open(response)
+        begin
+          string= open(response)
+        rescue
+          return {message: "Url not found"}
+        end  
       end
       string
     end	
