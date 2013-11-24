@@ -16,9 +16,7 @@ function getData(response){
   $.each(response.markets,function(index,value){
     marketString = marketString + value + ", "
   });
-  var length = marketString.length
-  console.log(length)
-  marketString = marketString.substring(0, length - 2);
+  marketString = marketString.substring(0, marketString.length - 2);
   console.log(marketString)
   fill_fields(response,marketString)
 }
