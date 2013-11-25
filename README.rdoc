@@ -1,28 +1,26 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+== Angelist Pull 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+How it works:
+
+1.Makes an Ajax call with the url 
+
+2. Parses url to raw domain
+
+3. If the url is in Angel List with www. it will add it.
+
+4. It runs a method that finds the parent of the city attribute and finds the parent of that location tag until the parent is one of the 50 states. The response doesn't comeback if the location is outside of the US.(I'll fix soon)
+
+5. the Response is then parsed on the client side and filled in to the correct input fields.
+
+* I have a few integration tests that all pass and a few helpers for the application controller that are tested. Most of the meat is in those helper methods.
+
+*The url logo field and logo field are both fields in the startup table. The user can either save a file or a link to the source. 
+
+
+
+
+
+
+

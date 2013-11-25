@@ -28,7 +28,7 @@ function run_post(){
   $.post(url,{data: site},function(response){
     if(response.message == "Url not found")
     {
-      $('h1').after("<p class="+"error"+">" + response.message + "</p>")
+      $('.page_head').after("<p class="+"error"+">" + response.message + "</p>")
     }
     else
     {
