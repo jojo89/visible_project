@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20131122043345) do
     t.string   "website"
     t.string   "name"
     t.string   "logo_url"
+    t.integer  "logo"
     t.string   "state"
     t.string   "city"
     t.text     "description"

@@ -4,6 +4,7 @@ class CreateStartups < ActiveRecord::Migration
       t.string :website
       t.string :name
       t.string :logo_url
+      t.integer :logo
       t.string :state
       t.string :city
       t.text :description
