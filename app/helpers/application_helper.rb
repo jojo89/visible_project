@@ -15,8 +15,7 @@ module ApplicationHelper
       states.include?(locale)
     end	
 
-    def find_location(hash)
-      p hash	
+    def find_location(hash)	
       locale_id = hash["locations"].first["id"].to_s
       finished = false
       while finished == false
