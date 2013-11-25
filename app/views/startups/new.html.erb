@@ -7,44 +7,45 @@
     <%= form_for @startup do |f|%>
     <ul class="form">
 	  <li>
-		<%= f.label :website%>
+		<%= f.label :website, raw("Website <span class=\"require\">*</span>")%>
 		<%= f.text_field :website%>
 	  </li>
 	  <li>
-		<%= f.label :name%>
+		<%= f.label :name, raw("Name <span class=\"require\">*</span>") %>
 		<%= f.text_field :name %>
 	  </li>
 	  <li>
-		<%= f.label :logo_url%>
+		<%= f.label :logo_url, raw("Logo url <span class=\"require\"></span>")%>
 		<%= f.text_field :logo_url %>
 	  </li>
       <li> 
-        <%= f.label :logo %>
+        <%= f.label :logo , raw("Logo <span class=\"require\"></span>")%>
         <%= f.file_field :logo %>
+        <button id="fileSelect">Select some files</button>
       </li>
 
 	  <li>
-		<%= f.label :state%>
+		<%= f.label :state, raw("State <span class=\"require\">*</span>")%>
 		<%= f.text_field :state %>
 	  </li>
 	  <li>
-		<%= f.label :city%>
+		<%= f.label :city, raw("City <span class=\"require\">*</span>")%>
 		<%= f.text_field :city %>
 	  </li>
 	  <li class = "textarea">
-		<%= f.label :description%>
+		<%= f.label :description, raw("Description <span class=\"require\">*</span>")%>
 		<%= f.text_area :description%><br/>
 	  </li>
 	  <li>
-		<%= f.label :pitch %>
+		<%= f.label :pitch, raw("Pitch <span class=\"require\">*</span>") %>
 		<%= f.text_field :pitch %><br/>
 	  </li>
 	  <li class= "textarea">
-		<%= f.label :markets%>
+		<%= f.label :markets, raw("Markets <span class=\"require\">*</span>")%>
 		<%= f.text_area :markets%><br/>
 	  </li>
 	  <li>
-		<%= f.label :angel_url %>
+		<%= f.label :angel_url, raw("Angel url <span class=\"require\"></span>") %>
 		<%= f.text_field :angel_url %><br/>
 	  </li>
 	  <li>

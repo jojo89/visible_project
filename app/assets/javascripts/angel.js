@@ -37,8 +37,16 @@ function run_post(){
   });
 }
 
+function uploadFile(){
+  document.querySelector('#fileSelect').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.querySelector('#startup_logo').click();
+  }, false);
+}
 
 $(document).ready(function(){
+  uploadFile()
   $('#pull_website').on('click',function(e){
     e.preventDefault();
     run_post()
