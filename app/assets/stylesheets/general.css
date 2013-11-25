@@ -19,9 +19,10 @@ textarea{
   border-radius: 7px;
   position: absolute;
   padding: 10px;
-  background: rgb(228, 228, 228);
+  background: rgb(187, 187, 187);
   position: absolute;
   right: 232px;
+  border:none;
 }
 
 #startup_logo{
@@ -42,10 +43,11 @@ list-style: none;
   font: normal 14px 'Open Sans';
   font-weight: 600;
   color: white;
+  border:none;
   border-radius: 7px;
   position: absolute;
   padding: 10px;
-  background: rgb(228, 228, 228);
+  background: rgb(187, 187, 187);
   position: absolute;
   right: 232px;
 }
@@ -60,9 +62,11 @@ list-style: none;
   width: 600px;
   padding: 0px 20px 20px 20px;
   position: relative;
+  top:57px;
 }
 .container div{
   display: inline-block;
+
 }
 
 .photo {
@@ -99,9 +103,9 @@ left:0px;
   position: absolute;
   top: 84px;
   right: 15px;
-  border: 5px solid rgb(228, 228, 228);
+  border: 5px solid rgb(187, 187, 187);
   padding: 10px;
-  background: rgb(228, 228, 228);
+  background: rgb(187, 187, 187);
 }
 
 
@@ -128,3 +132,41 @@ left:0px;
 }
 
 
+.nav_container {
+  z-index: 1;
+  height: 50px;
+  background-color: #021A31;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.8;
+}
+nav {
+  width: 800px;
+  margin: 0 auto;
+}
+
+nav h1 {
+  margin: 10px 0;
+  padding: 0;
+  float: left;
+  color: #FF551F;
+  font-size: 28px;
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  color: #B7CDE2;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #B7CDE2;
+
+}
